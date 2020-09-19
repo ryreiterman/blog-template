@@ -8,13 +8,22 @@
   box-sizing: inherit;
 }
 
-main {
-  border: 1px solid red;
-  min-height: 50vh;
-}
-
 body {
   font-family: 'Roboto', sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  min-height: 50vh;
+  border-bottom: 1px solid grey;
+  padding: 1em;
+}
+
+.hero {
+  text-align: center;
 }
 
 .media {
