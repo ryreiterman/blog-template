@@ -1,0 +1,45 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+main {
+  border: 1px solid red;
+  min-height: 50vh;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.media {
+  margin:10px;
+  border-bottom: 1px solid grey;
+  padding: 1em;
+  max-width: 95%;
+
+}
+.media, .bd {
+  overflow:hidden;
+  _overflow:visible;
+  zoom:1;
+}
+
+.media .img {
+  float:left;
+  margin-right: 10px;
+}
+
+.media .img img {
+  display:block;
+}
+
+.media .imgExt {
+  float:right;
+  margin-left: 10px;
+}
