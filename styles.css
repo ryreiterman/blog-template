@@ -1,5 +1,16 @@
+
+
 :root {
   box-sizing: border-box;
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1000px;
+  --fixed-width: 620px;
 }
 
 *,
@@ -10,10 +21,19 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  max-width: 1200px;
+  margin: 1em auto;
   border: 1px solid grey;
   padding: 1em;
-  margin: 1em;
   border-radius: .3em;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 img {
@@ -26,8 +46,16 @@ main {
   padding: 1em;
 }
 
-.hero {
+.logo {
+  height: 60px;
+}
+
+.main-hero {
+  margin: 2em;
   text-align: center;
+}
+
+.hero {
   box-shadow: 3px 3px 8px #888888;
 }
 
@@ -56,4 +84,116 @@ main {
 .media .imgExt {
   float:right;
   margin-left: 10px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  background-color: #f2f2f2;
+  
+  margin-top: 2em;
+  padding: 1em;
+}
+
+.social-icons {
+flex-flow: column;
+}
+
+.social-icons img {
+  padding: .5em;
+}
+
+/*
+===============
+Navbar
+===============
+*/
+nav {
+  background: var(--clr-white);
+  box-shadow: var(--light-shadow);
+}
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.nav-toggle {
+  font-size: 1.5rem;
+  color: var(--clr-primary-5);
+  background: transparent;
+  border-color: transparent;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.nav-toggle:hover {
+  color: var(--clr-primary-1);
+  transform: rotate(90deg);
+}
+
+.links a {
+  color: var(--clr-grey-3);
+  font-size: 1rem;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: var(--transition);
+}
+.links a:hover {
+  background: var(--clr-primary-8);
+  color: var(--clr-primary-5);
+  padding-left: 1.5rem;
+}
+
+.links {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.show-links {
+  height: 10rem;
+}
+
+@media screen and (min-width: 800px) {
+
+  .nav-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .logo {
+    margin-right: auto;
+    height: 80px;
+  }
+
+  .nav-header {
+    padding: 0;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .links {
+    height: auto;
+    display: flex;
+  }
+  .links a {
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+  .links a:hover {
+    padding: 0;
+    background: transparent;
+  }
+
+footer {
+  flex-direction: row;
+  align-items: baseline;
+}
+
+
 }
